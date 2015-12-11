@@ -1,0 +1,34 @@
+# npm
+/node_modules/
+
+# bower
+/sample/components/
+
+# gulp build
+/build/
+/.tmp/
+/dist/
+/dist/**/*.*
+dist/
+/dist/js
+/dist/docs/
+/dist/sample/
+/dist/reports/
+
+# netbeans
+/nbproject/
+
+# idea
+/.idea/
+*.iml
+
+# brackets
+.brackets.json
+
+# js libraries
+/src/app/client/js/lib
+
+# mac
+Icon\r\r
+Icon
+.DS_Store
