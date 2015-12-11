@@ -1,0 +1,19 @@
+{
+  "name": "label-builder",
+  "version": "1.0.0",
+  "description": "A canvas-based application for building commercial labels",
+  "main": "gulpfile.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://etovian@github.com/etovian/label-builder.git"
+  },
+  "author": "Mike Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etovian/label-builder/issues"
+  },
+  "homepage": "https://github.com/etovian/label-builder"
+}
