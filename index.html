@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <!-- build:css styles/all.css -->
+    <link rel="stylesheet" type="text/css" href="src/app/client/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="src/app/client/js/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="src/app/client/js/lib/angular-aside/dist/css/angular-aside.min.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/all.js -->
+    <!-- 	bower components -->
+    <script type="text/javascript" src="src/app/client/js/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/angular-aside/dist/js/angular-aside.min.js"></script>
+    <script type="text/javascript" src="src/app/client/js/lib/EaselJS/lib/easeljs-0.8.2.min.js"></script>
+    <!-- 	app -->
+    <script type="text/javascript" src="src/app/client/js/app.js"></script>
+    <script type="text/javascript" src="src/app/client/js/route.config.js"></script>
+    <script type="text/javascript" src="src/app/client/js/templates.js"></script>
+    <!-- 	services -->
+    <script type="text/javascript" src="src/app/client/js/services/notification.service.js"></script>
+    <script type="text/javascript" src="src/app/client/js/services/navigation.service.js"></script>
+    <!-- 	controllers -->
+    <script type="text/javascript" src="src/app/client/js/controllers/main.controller.js"></script>
+    <script type="text/javascript" src="src/app/client/js/controllers/welcome.controller.js"></script>
+    <script type="text/javascript" src="src/app/client/js/controllers/label.add.controller.js"></script>
+    <!-- 	directives -->
+    <script type="text/javascript" src="src/app/client/js/directives/main.menu.directive.js"></script>
+    <script type="text/javascript" src="src/app/client/js/directives/label.builder.canvas.directive.js"></script>
+    <!-- endbuild -->
+
+    <title>Label Builder</title>
+</head>
+
+<body ng-controller="MainController as vm">
+    <trh-main-menu></trh-main-menu>
+    <div class="main-content">
+        <div class="container-fluid">
+            <ng-view></ng-view>
+        </div>
+    </div>
+    <div class="notification-container">
+        <div data-ng-repeat="n in vm.getActiveNotifications() track by $index" class="shadow alert" data-ng-class="vm.getNotificationClass(n)">
+            <span data-ng-click="vm.removeNotification(n);" class="glyphicon glyphicon-remove pull-right"></span>
+            <h4>{{ n.title }}</h4>
+            <p>{{ n.text }}</p>
+            <p data-ng-repeat="line in n.lines track by $index">{{ line }}</p>
+        </div>
+    </div>
+</body>
+
+</html>
