@@ -6,6 +6,11 @@ body {
 /* 	display: none; */
 }
 
+canvas {
+
+	border: 1px solid black;
+}
+
 .main-content {
 	margin-top: 50px;
 	margin-bottom: 200px;

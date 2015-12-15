@@ -34,28 +34,82 @@
 		scope.vm.stage = stage;
 	}
 
-	function LabelBuilderCanvasDirectiveController() {
+	function LabelBuilderCanvasDirectiveController(doo) {
 		var vm = this;
 		angular.extend(vm, {
-			render: function() {
+			update: true,
+			render_old: function() {
 				if(vm.stage) {
+
 					vm.stage.removeAllChildren(); //repaints make elements fuzzy if existing elements are not removed
-					var circle = new createjs.Shape();
-					circle.graphics.beginFill("DeepSkyBlue").drawCircle(0, 0, 100);
-					circle.x = 100;
-					circle.y = 100;
-					vm.stage.addChild(circle);
+
+					function iterate(component) {
+
+						var circle = new createjs.Shape();
+						circle.graphics
+							.beginFill(component.color)
+							.drawCircle(component.x, component.y, component.radius);
+
+						vm.stage.addChild(circle);
+					}
+
+					vm.nutraLabel.components.forEach(iterate);
 
 					var text = new createjs.Text(vm.nutraLabel.text, "36px Arial", "#777");
-					text.x = 350;
-					text.y = 200;
+					text.x = 20;
+					text.y = 40;
+					
 					vm.stage.addChild(text);
 				}
 			},
-			tick: function(event) {
-				if(vm.stage) {
-					vm.render();
+			render: function() {
+
+				var image = new Image();
+				image.src = 'src/app/client/images/movember.png';
+				
+				var bitmap;
+				var container = new createjs.Container();
+				vm.stage.addChild(container);
+				
+				image.onload = function(event) {
+
+					var image = event.target;
+
+					for (var i = 0; i < 10; i++) {
+						var bitmap = new createjs.Bitmap(image);
+						container.addChild(bitmap);
+						bitmap.x = vm.stage.canvas.width * Math.random() | 0;
+						bitmap.y = vm.stage.canvas.height * Math.random() | 0;
+						bitmap.rotation = 360 * Math.random() | 0;
+						bitmap.regX = bitmap.image.width / 2 | 0;
+						bitmap.regY = bitmap.image.height / 2 | 0;
+						bitmap.scaleX = bitmap.scaleY = bitmap.scale = Math.random() * 0.4 + 0.6;
+						bitmap.name = "bmp_" + i;
+						bitmap.cursor = "grabbing";
+
+						bitmap.on("mousedown", function (evt) {
+							this.parent.addChild(this);
+							this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
+						});
+
+						bitmap.on("pressmove", function (evt) {
+							this.x = evt.stageX + this.offset.x;
+							this.y = evt.stageY + this.offset.y;
+							// indicate that the stage should be updated on the next tick:
+							// vm.update = true;
+							vm.stage.update();
+						});
+					}
+
 					vm.stage.update(event);
+					// vm.update = false;
+				};
+			},
+			tick: function(event) {
+				if(vm.stage  && vm.update) {
+					vm.render_old();
+					vm.render();
+					vm.update = false;
 				}
 			}
 		});

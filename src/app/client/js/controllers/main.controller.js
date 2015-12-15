@@ -1,4 +1,7 @@
 (function() {
+
+	'use strict';
+
 	angular.module('app').controller('MainController', ['NotificationService', MainController]);
 
 	function MainController(notificationService) {

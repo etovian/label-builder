@@ -12,7 +12,27 @@
 			label: {
 				text: 'Howdy!',
 				components: [
-
+					{
+						type: 'circle',
+						x: 100,
+						y: 100,
+						radius: 100,
+						color: '#30d23a'
+					},
+					{
+						type: 'circle',
+						x: 150,
+						y: 150,
+						radius: 75,
+						color: '#a32323'
+					},
+					{
+						type: 'circle',
+						x: 200,
+						y: 200,
+						radius: 50,
+						color: '#2742b4'
+					},
 				]
 			}
 		});
