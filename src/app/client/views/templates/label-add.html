@@ -5,14 +5,9 @@
 			<input ng-model="vm.label.text" type="text">
 		</div>
 	</div>
-	<div class="row">
+	<div class="row" ng-repeat="label in vm.getLabels()">
 		<div class="col-md-12">
-			<nutra-lb-canvas nutra-label="vm.label"></nutra-lb-canvas>		
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<nutra-lb-canvas nutra-label="vm.label"></nutra-lb-canvas>		
+			<nutra-lb-canvas nutra-label="label"></nutra-lb-canvas>
 		</div>
 	</div>
 </div>

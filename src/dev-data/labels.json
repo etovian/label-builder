@@ -1,0 +1,78 @@
+[
+	{
+		"id": 1,
+	    "components": [
+		    {
+		        "type": "circle",
+		        "x": 100,
+		        "y": 100,
+		        "radius": 100,
+		        "color": "#30d23a"
+		    }, {
+		        "type": "circle",
+		        "x": 150,
+		        "y": 150,
+		        "radius": 75,
+		        "color": "#a32323"
+		    }, {
+		        "type": "circle",
+		        "x": 200,
+		        "y": 200,
+		        "radius": 50,
+		        "color": "#2742b4"
+		    }, {
+		    	"type": "text",
+		    	"text": "Hello World!",
+		    	"x": 20,
+		    	"y": 40,
+		    	"color": "#9EACAB",
+		    	"font": "36px Arial"
+		    }, {
+		    	"type": "image",
+		    	"src": "src/app/client/images/NC-Corporate-Logo1.png",
+		    	"rotation": 0,
+		    	"x": 850,
+		    	"y": 20,
+		    	"scale": 0.75
+		    }
+	    ]
+	}, {
+		"id": 2,
+	    "components": [
+		    {
+		        "type": "circle",
+		        "x": 200,
+		        "y": 200,
+		        "radius": 100,
+		        "color": "#B730D2"
+		    }, {
+		        "type": "circle",
+		        "x": 250,
+		        "y": 250,
+		        "radius": 75,
+		        "color": "#D2BB30"
+		    }, {
+		        "type": "circle",
+		        "x": 300,
+		        "y": 300,
+		        "radius": 50,
+		        "color": "#276C10"
+		    }, {
+		    	"type": "image",
+		    	"src": "src/app/client/images/movember.png",
+		    	"rotation": -25,
+		    	"x": 600,
+		    	"y": 250,
+		    	"scale": 1
+		    }, {
+		    	"type": "text",
+		    	"text": "Mighty Mighty Movember!",
+		    	"x": 530,
+		    	"y": 370,
+		    	"rotation": -25,
+		    	"color": "#9EACAB",
+		    	"font": "25px Arial"
+		    }
+	    ]
+	}
+]

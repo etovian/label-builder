@@ -11,7 +11,7 @@
 				nutraLabel: '='
 			},
 			templateUrl: 'directives/label-builder-canvas.html',
-			controller: [LabelBuilderCanvasDirectiveController],
+			controller: ['LabelComponentService', '$q', LabelBuilderCanvasDirectiveController],
 			controllerAs: 'vm',
 			bindToController: true,
 			link: link,
@@ -34,81 +34,30 @@
 		scope.vm.stage = stage;
 	}
 
-	function LabelBuilderCanvasDirectiveController(doo) {
+	function LabelBuilderCanvasDirectiveController(labelComponentService, $q) {
 		var vm = this;
 		angular.extend(vm, {
 			update: true,
-			render_old: function() {
-				if(vm.stage) {
+			render: function() {
+				if(vm.stage && vm.nutraLabel) {
 
 					vm.stage.removeAllChildren(); //repaints make elements fuzzy if existing elements are not removed
 
-					function iterate(component) {
+					function iterate(componentData) {
 
-						var circle = new createjs.Shape();
-						circle.graphics
-							.beginFill(component.color)
-							.drawCircle(component.x, component.y, component.radius);
-
-						vm.stage.addChild(circle);
-					}
-
-					vm.nutraLabel.components.forEach(iterate);
-
-					var text = new createjs.Text(vm.nutraLabel.text, "36px Arial", "#777");
-					text.x = 20;
-					text.y = 40;
-					
-					vm.stage.addChild(text);
-				}
-			},
-			render: function() {
-
-				var image = new Image();
-				image.src = 'src/app/client/images/movember.png';
-				
-				var bitmap;
-				var container = new createjs.Container();
-				vm.stage.addChild(container);
-				
-				image.onload = function(event) {
-
-					var image = event.target;
-
-					for (var i = 0; i < 10; i++) {
-						var bitmap = new createjs.Bitmap(image);
-						container.addChild(bitmap);
-						bitmap.x = vm.stage.canvas.width * Math.random() | 0;
-						bitmap.y = vm.stage.canvas.height * Math.random() | 0;
-						bitmap.rotation = 360 * Math.random() | 0;
-						bitmap.regX = bitmap.image.width / 2 | 0;
-						bitmap.regY = bitmap.image.height / 2 | 0;
-						bitmap.scaleX = bitmap.scaleY = bitmap.scale = Math.random() * 0.4 + 0.6;
-						bitmap.name = "bmp_" + i;
-						bitmap.cursor = "grabbing";
-
-						bitmap.on("mousedown", function (evt) {
-							this.parent.addChild(this);
-							this.offset = {x: this.x - evt.stageX, y: this.y - evt.stageY};
-						});
-
-						bitmap.on("pressmove", function (evt) {
-							this.x = evt.stageX + this.offset.x;
-							this.y = evt.stageY + this.offset.y;
-							// indicate that the stage should be updated on the next tick:
-							// vm.update = true;
+						$q.resolve(labelComponentService.getComponent(componentData)).then(function(component) {
+							vm.stage.addChild(component);
 							vm.stage.update();
 						});
 					}
 
-					vm.stage.update(event);
-					// vm.update = false;
-				};
+					vm.nutraLabel.components.forEach(iterate);
+				}
 			},
 			tick: function(event) {
 				if(vm.stage  && vm.update) {
-					vm.render_old();
 					vm.render();
+					// vm.render();
 					vm.update = false;
 				}
 			}

@@ -75,7 +75,7 @@
         process.stdout.write('Starting browserSync and superstatic...\n');
         browserSync({
             port: 3000,
-            files: ['**/*.html', '**/*.js', '**/*.css'],
+            files: ['**/*.html', '**/*.js', '**/*.css', '**/*.json'],
             injectChanges: true,
             logFileChanges: false,
             logLevel: 'silent',

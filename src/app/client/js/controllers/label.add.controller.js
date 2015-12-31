@@ -2,38 +2,19 @@
 
 	'use strict';
 
-	angular.module('app').controller('LabelAddController', ['NotificationService', LabelAddController]);
+	var deps = ['NotificationService', 'LabelService', LabelAddController];
+	angular.module('app').controller('LabelAddController', deps);
 
-	function LabelAddController(notificationService) {
+	function LabelAddController(notificationService, labelService) {
 
 		var vm = this;
 
 		angular.extend(vm, {
-			label: {
-				text: 'Howdy!',
-				components: [
-					{
-						type: 'circle',
-						x: 100,
-						y: 100,
-						radius: 100,
-						color: '#30d23a'
-					},
-					{
-						type: 'circle',
-						x: 150,
-						y: 150,
-						radius: 75,
-						color: '#a32323'
-					},
-					{
-						type: 'circle',
-						x: 200,
-						y: 200,
-						radius: 50,
-						color: '#2742b4'
-					},
-				]
+			getLabel: function(id) {
+				return labelService.getLabelById(id);
+			},
+			getLabels: function() {
+				return labelService.getLabels();
 			}
 		});
 
