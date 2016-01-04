@@ -32,6 +32,7 @@
 
 		stage.autoClear = true;
 		scope.vm.stage = stage;
+		scope.vm.canvasContext = element[0].getContext('2d');
 	}
 
 	function LabelBuilderCanvasDirectiveController(labelComponentService, $q) {

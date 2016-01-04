@@ -5,12 +5,13 @@
 	var deps = [
 		'CircleService', 
 		'ImageService',
+		'RectangleService',
 		'TextService',
 		LabelComponentService
 	];
 	angular.module('app').factory('LabelComponentService', deps);
 
-	function LabelComponentService(circleService, imageService, textService) {
+	function LabelComponentService(circleService, imageService, rectangleService, textService) {
 
 		return {
 			getCircle: function(data) {
@@ -20,6 +21,7 @@
 				var map = {
 					'circle': this.getCircle,
 					'image': this.getImage,
+					'rectangle': this.getRectangle,
 					'text': this.getText
 				};
 
@@ -27,6 +29,9 @@
 			},
 			getImage: function(data) {
 				return imageService.getImage(data);
+			},
+			getRectangle: function(data) {
+				return rectangleService.getRectangle(data);
 			},
 			getText: function(data) {
 				return textService.getText(data);
