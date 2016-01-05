@@ -1,2 +1,12 @@
 <!DOCTYPE html>
-<canvas width="1000" height="500"></canvas>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <canvas ng-mousedown="vm.mousedown($event)" ng-mouseleave="vm.mouseleave($event)" ng-mousemove="vm.mousemove($event)" ng-mouseup="vm.mouseup($event)" width="1000" height="500">
+            </canvas>
+        </div>
+        <div class="col-md-12">
+        	<input type="number" min="0.25" max="3" step="0.25" ng-model="vm.scale" ng-change="vm.render()"/>
+        </div>
+    </div>
+</div>
