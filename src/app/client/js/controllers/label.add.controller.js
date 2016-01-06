@@ -19,7 +19,7 @@
 		});
 
 		notificationService.add({
-			text: 'Let\'s add some labels,  yo!',
+			text: 'Let\'s add some labels!',
 			title: 'Label Builder',
 			type: notificationService.NOTIFICATION_TYPES.INFO
 		});

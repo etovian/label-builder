@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <div container-fluid>
-	<div class="row">
-		<div class="col-md-12">
-			<input ng-model="vm.label.text" type="text">
-		</div>
-	</div>
 	<div class="row" ng-repeat="label in vm.getLabels()">
 		<div class="col-md-12">
 			<nutra-lb-canvas nutra-label="label"></nutra-lb-canvas>

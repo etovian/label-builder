@@ -79,7 +79,7 @@
             injectChanges: true,
             logFileChanges: false,
             logLevel: 'silent',
-            logPrefix: 'road-home',
+            logPrefix: 'label-builder',
             notify: true,
             reloadDelay: 0,
             server: {
