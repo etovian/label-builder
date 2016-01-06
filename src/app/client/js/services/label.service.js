@@ -2,9 +2,10 @@
 
 	'use strict';
 
-	angular.module('app').factory('LabelService', ['$q', '$http', LabelService]);
+	var deps = ['$q', '$http', 'NotificationService', LabelService];
+	angular.module('app').factory('LabelService', deps);
 
-	function LabelService($q, $http) {
+	function LabelService($q, $http, notificationService) {
 
 		var BASE_URL = 'dev-data/';
 		var LABEL_URL = BASE_URL + 'labels.json';
@@ -17,6 +18,18 @@
 		
 
 		return {
+			deleteLabel: function(labelItemCode) {
+				var deferred = $q.defer();
+				var labelSummary = _.findWhere(existing_label_summaries, {itemCode: labelItemCode});
+				existing_label_summaries = _.without(existing_label_summaries, labelSummary);
+				deferred.resolve(labelSummary);
+				notificationService.add({
+					title: 'Label Deleted',
+					text: labelSummary.productName + ' was deleted.',
+					type: notificationService.NOTIFICATION_TYPES.DANGER
+				});
+				return deferred.promise;
+			},
 			getLabels: function() {
 				return labels;
 			},

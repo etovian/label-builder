@@ -22,7 +22,7 @@
 						displayName: 'Brand',
 						field: 'brandCode'
 					}, {
-						displayName: 'version',
+						displayName: 'Version',
 						field: 'versionMajor'
 					}, {
 						displayName: 'Status',
@@ -41,7 +41,8 @@
 						field: 'launched'
 					}
 				],
-				data: [],
+				data: labelService.getExistingLabelSummaries(), //[],
+				enableFiltering: true,
 				enableRowSelection: true,
 				enableRowHeaderSelection: false,
 				multiSelect: false,
@@ -49,20 +50,30 @@
 				onRegisterApi: function(gridApi) {
 					vm.gridApi = gridApi;
 					gridApi.selection.on.rowSelectionChanged(null, function(row) {
-						vm.setSelectedLabel(row.entity);
+						vm.setSelectedLabelSummary(row.entity);
 					});
 				}
+			},
+			itemCode: '',
+			selectedLabelSummary: null,
+			deleteSelectedLabel: function() {
+				console.log('deleteSelectedLabel');
+				labelService.deleteLabel(vm.selectedLabelSummary.itemCode).then(function() {
+					vm.gridOptions.data = vm.getExistingLabelSummaries();
+				});
 			},
 			getExistingLabelSummaries: function() {
 				return labelService.getExistingLabelSummaries();
 			},
-			setSelectedLabel: function(label) {
-				console.log(label);
+			navigateByItemCode: function() {
+				console.log('navigateByItemCode');
+			},
+			navigateToSelectedLabel: function() {
+				console.log('navigateToSelectedLabel');
+			},
+			setSelectedLabelSummary: function(labelSummary) {
+				vm.selectedLabelSummary = labelSummary;
 			}
-		});
-
-		labelService.requestExistingLabelSummaries().then(function() {
-			vm.gridOptions.data = labelService.getExistingLabelSummaries();
 		});
 	}
 })();

@@ -13,6 +13,10 @@
 			return LabelService.requestLabels();
 		}
 
+		function existingLabelsPrepService(LabelService) {
+			return LabelService.requestExistingLabelSummaries();
+		}
+
 		$routeProvider
 			.when('/welcome', {
 				templateUrl: templatesPath + 'welcome.html',
@@ -24,7 +28,7 @@
 				controller: 'LabelListController',
 				controllerAs: 'vm',
 				resolve: {
-					labelsPrepService: labelsPrepService
+					existingLabelsPrepService: existingLabelsPrepService
 				}
 			})
 			.when('/label-add', {
