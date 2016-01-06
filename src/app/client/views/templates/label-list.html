@@ -37,11 +37,11 @@
 			<form class="inline-form pull-right">
 				<div class="form-group">
 					<label class="radio-inline">
-						<input type="radio" name="labelOptions">
+						<input ng-model="vm.searchCriteria.type" value="active" type="radio" name="labelOptions">
 						Active Labels
 					</label>
 					<label class="radio-inline">
-						<input type="radio" name="labelOptions">
+						<input ng-model="vm.searchCriteria.type" value="deleted" type="radio" name="labelOptions">
 						Deleted Labels
 					</label>
 				</div>
@@ -61,7 +61,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="checkbox">
-				<input type="checkbox"/>
+				<input ng-model="vm.searchCriteria.approved" type="checkbox"/>
 				Display Approved Labels
 			</div>
 		</div>

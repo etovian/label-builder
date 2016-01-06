@@ -55,6 +55,10 @@
 				}
 			},
 			itemCode: '',
+			searchCriteria: {
+				type: "active",
+				approved: false
+			},
 			selectedLabelSummary: null,
 			deleteSelectedLabel: function() {
 				console.log('deleteSelectedLabel');
