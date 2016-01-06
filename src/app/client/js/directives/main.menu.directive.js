@@ -9,21 +9,45 @@
 
 			},
 			templateUrl: 'directives/main.menu.html',
-			controller: ['navigationService', MainMenuDirectiveController],
+			controller: ['navigationService', '$location', MainMenuDirectiveController],
 			controllerAs: 'vm',
 			bindToController: true
 		};
 	}
 
-	function MainMenuDirectiveController(navigationService) {
+	function MainMenuDirectiveController(navigationService, $location) {
 
-		//TODO: create navigationService
 		var vm = this;
 		angular.extend(vm, {
-			goToAddIncident: function() {
-				navigationService.goToAddIncident();
+			items: [
+				{
+					text: 'Home',
+					href: '#/welcome'
+				}, {
+					text: 'Start',
+					href: '#/label-list'
+				}, {
+					text: 'Choose Container',
+					href: '#/container'
+				}, {
+					text: 'Choose Content',
+					href: '#/content'
+				}, {
+					text: 'Ingredients and Text',
+					href: '#/ingredients'
+				}, {
+					text: 'Review and Submit',
+					href: '#/review'
+				}
+			],
+			getCssClass: function(item) {
+				var cssClass = '';
+				var adjustedHref = item.href.replace('#', '');
+				if(adjustedHref === $location.path()) {
+					cssClass = "active";
+				}
+				return cssClass;
 			}
-			//...
 		});
 	}
 

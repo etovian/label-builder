@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <ul class="nav nav-pills">
+	<li ng-repeat="item in vm.items" ng-class="vm.getCssClass(item)">
+		<a href="{{item.href}}">{{item.text}}</a>
+	</li>
+</ul>
+<!-- <ul class="nav nav-pills">
 	<li>
 		<a href="#/welcome">Home</a>
 	</li>
@@ -18,34 +23,4 @@
 	<li>
 		<a href="#/review">Review and Submit</a>
 	</li>
-</ul>
-<!-- <nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#/play">Label Builder</a>
-		</div>
-		<div>
-			<ul class="nav navbar-nav">
-				<li class="dropdown">
-					<a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-						<span>Labels</span> 
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a href="#/label-list" style="cursor: pointer;">Search</a></li>
-						<li><a href="#/label-add" style="cursor: pointer;">Add</a></li>
-					</ul>
-		        </li>
-		        <li class="dropdown">
-					<a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-						<span>Admin</span> 
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu" role="menu">
-						<li><a style="cursor: pointer;">Users</a></li>
-					</ul>
-		        </li>
-			</ul>
-		</div>
-	</div>
-</nav>		 -->
+</ul> -->
