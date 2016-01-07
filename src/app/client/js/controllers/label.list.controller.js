@@ -2,11 +2,11 @@
 	
 	'use strict';
 
-	var deps = ['LabelService', LabelListController];
+	var deps = ['LabelService', 'NavigationService', 'NotificationService', LabelListController];
 
 	angular.module('app').controller('LabelListController', deps);
 
-	function LabelListController(labelService) {
+	function LabelListController(labelService, navigationService, notificationService) {
 
 		var vm = this;
 		angular.extend(vm, {
@@ -73,7 +73,9 @@
 				console.log('navigateByItemCode');
 			},
 			navigateToSelectedLabel: function() {
-				console.log('navigateToSelectedLabel');
+				labelService.requestLabelById(vm.selectedLabelSummary.labelId).then(function() {
+					navigationService.goToIngredients();
+				});
 			},
 			setSelectedLabelSummary: function(labelSummary) {
 				vm.selectedLabelSummary = labelSummary;

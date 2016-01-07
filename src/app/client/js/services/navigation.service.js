@@ -1,16 +1,16 @@
 (function() {
 	'use strict';
 
-	angular.module('app').factory('navigationService', ['$location', NavigationService]);
+	angular.module('app').factory('NavigationService', ['$location', NavigationService]);
 
 	function NavigationService($location) {
 
 		return {
 			goTo: function(path) {
-				
+				$location.path(path);
 			},
-			goToAddIncident: function() {
-
+			goToIngredients: function() {
+				this.goTo('/ingredients');
 			}
 		};
 	}

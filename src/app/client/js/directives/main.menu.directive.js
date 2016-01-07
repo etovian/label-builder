@@ -9,7 +9,7 @@
 
 			},
 			templateUrl: 'directives/main.menu.html',
-			controller: ['navigationService', '$location', MainMenuDirectiveController],
+			controller: ['NavigationService', '$location', MainMenuDirectiveController],
 			controllerAs: 'vm',
 			bindToController: true
 		};
@@ -44,6 +44,7 @@
 				var cssClass = '';
 				var adjustedHref = item.href.replace('#', '');
 				if(adjustedHref === $location.path()) {
+				// if($location.path().indexOf(adjustedHref) > 0) {
 					cssClass = "active";
 				}
 				return cssClass;

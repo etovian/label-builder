@@ -16,7 +16,7 @@
 		function existingLabelsPrepService(LabelService) {
 			return LabelService.requestExistingLabelSummaries();
 		}
-
+		
 		$routeProvider
 			.when('/welcome', {
 				templateUrl: templatesPath + 'welcome.html',
@@ -38,6 +38,11 @@
 				resolve: {
 					labelsPrepService: labelsPrepService
 				}
+			})
+			.when('/ingredients', {
+				templateUrl: templatesPath + 'ingredients.html',
+				controller: 'IngredientsController',
+				controllerAs: 'vm'
 			})
 			.when('/label-edit', {
 				templateUrl: templatesPath + 'label-edit.html',
