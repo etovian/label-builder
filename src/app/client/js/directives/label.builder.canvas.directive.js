@@ -6,12 +6,21 @@
 
 	function LabelBuilderCanvasDirective() {
 
+		var controller = [
+			'LabelComponentService', 
+			'$q', 
+			'StaticDataService', 
+			'NotificationService', 
+			'$aside',
+			LabelBuilderCanvasDirectiveController
+		];
+
 		return {
 			scope: {
 				nutraLabel: '='
 			},
 			templateUrl: 'directives/label-builder-canvas.html',
-			controller: ['LabelComponentService', '$q', 'StaticDataService', 'NotificationService', LabelBuilderCanvasDirectiveController],
+			controller: controller,
 			controllerAs: 'vm',
 			bindToController: true,
 			link: link,
@@ -40,7 +49,7 @@
 		});
 	}
 
-	function LabelBuilderCanvasDirectiveController(labelComponentService, $q, staticDataService, notificationService) {
+	function LabelBuilderCanvasDirectiveController(labelComponentService, $q, staticDataService, notificationService, $aside) {
 		var vm = this;
 		angular.extend(vm, {
 			dragStart: null,
@@ -127,22 +136,17 @@
 				vm.isMousedown = false;
 				vm.updateOffset($event);
 			},
-			// render: function() {
-			// 	if(vm.stage && vm.nutraLabel) {
+			openFontSizesModal: function() {
+				var opts = {
+					templateUrl: 'templates/' + 'font.sizes.html',
+					controller: 'FontSizesController',
+					controllerAs: 'vm',
+					placement: 'right',
+					size: 'md'
+				};
 
-			// 		vm.stage.removeAllChildren(); //repaints make elements fuzzy if existing elements are not removed
-
-			// 		function iterate(componentData) {
-
-			// 			$q.resolve(labelComponentService.getComponent(componentData)).then(function(component) {
-			// 				vm.stage.addChild(component);
-			// 				vm.stage.update();
-			// 			});
-			// 		}
-
-			// 		vm.nutraLabel.components.forEach(iterate);
-			// 	}
-			// },
+				$aside.open(opts);
+			},
 			render: function() {
 				
 				if(vm.stage && vm.nutraLabel) {
