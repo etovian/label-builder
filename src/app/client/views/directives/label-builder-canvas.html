@@ -2,22 +2,189 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <!-- <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand">Brand</a>
+                    </div> -->
+                    <!-- Pan/Select -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Canvas Mode 
+                                    <span class="glyphicon glyphicon-move"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-hand-up"></span> Select
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-move"></span> Pan
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Font Size -->
+                                    <span class="glyphicon glyphicon-text-size"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Font Color -->
+                                    <span class="glyphicon glyphicon-text-color"></span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <!-- Text Justification --> 
+                                    <span class="glyphicon glyphicon-align-justify"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-align-justify"></span> Full
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-align-left"></span> Left
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-align-right"></span> Right
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-align-center"></span> Center
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Edit Info -->
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Email Designer -->
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <!-- Save -->
+                                    <span class="glyphicon glyphicon-cloud-upload"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-duplicate"></span> Save Copy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <!-- Print -->
+                                    <span class="glyphicon glyphicon-print"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-eye-open"></span> Preview
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-print"></span> Print
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            <span class="glyphicon glyphicon-picture"></span> JPG Backpanel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Full Label View -->
+                                    <span class="glyphicon glyphicon-resize-horizontal"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    <!-- Backpanel View -->
+                                    <span class="glyphicon glyphicon-resize-vertical"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <form class="navbar-form navbar-left" role="search">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-zoom-in"></span>
+                                            </span>
+                                            <input ng-model="vm.zoomInput" ng-change="vm.zoomInputChange()" type="number" min="50" max="300" step="5" class="form-control" placeholder="Zoom">
+                                            <span class="input-group-addon">%</span>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <a ng-click="vm.toggleRotation()" style="cursor: pointer">
+                                    <!-- Toggle Auto Orientation -->
+                                    <span class="glyphicon glyphicon-retweet"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="cursor: pointer">
+                                    Log Out
+                                    <span class="glyphicon glyphicon-log-out"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <canvas ng-mousedown="vm.mousedown($event)" ng-mouseleave="vm.mouseleave($event)" ng-mousemove="vm.mousemove($event)" ng-mouseup="vm.mouseup($event)" width="1000" height="500">
             </canvas>
-        </div>
-        <div class="col-md-12">
-        	<!-- <input type="number" min="0.25" max="3" step="0.25" ng-model="vm.scale" ng-change="vm.zoom(vm.scale)"/> -->
-        	<div class="btn-group">
-        		<button ng-click="vm.zoomIn()" class="btn btn-default">
-        			<span class="glyphicon glyphicon-zoom-in"></span>
-        		</button>
-        		<button ng-click="vm.zoomOut()" class="btn btn-default">
-        			<span class="glyphicon glyphicon-zoom-out"></span>
-        		</button>
-        		<button ng-click="vm.resetView()" class="btn btn-default">Reset</button>
-        		<label>Zoom: {{vm.scale.label}}</label>
-        	</div>
-        	
+            <!-- <canvas ng-mousedown="vm.mousedown($event)" ng-mouseleave="vm.mouseleave($event)" ng-mousemove="vm.mousemove($event)" ng-mouseup="vm.mouseup($event)">
+            </canvas> -->
         </div>
     </div>
 </div>

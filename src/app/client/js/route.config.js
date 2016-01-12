@@ -16,6 +16,10 @@
 		function existingLabelsPrepService(LabelService) {
 			return LabelService.requestExistingLabelSummaries();
 		}
+
+		function selectedLabelPrepService(LabelService, $route) {
+			return LabelService.requestLabelById($route.current.params.labelId);
+		}
 		
 		$routeProvider
 			.when('/welcome', {
@@ -43,6 +47,14 @@
 				templateUrl: templatesPath + 'ingredients.html',
 				controller: 'IngredientsController',
 				controllerAs: 'vm'
+			})
+			.when('/ingredients/labelId/:labelId', {
+				templateUrl: templatesPath + 'ingredients.html',
+				controller: 'IngredientsController',
+				controllerAs: 'vm',
+				resolve: {
+					selectedLabelPrepService: selectedLabelPrepService
+				}
 			})
 			.when('/label-edit', {
 				templateUrl: templatesPath + 'label-edit.html',

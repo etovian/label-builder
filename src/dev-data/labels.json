@@ -66,9 +66,10 @@
 		    	"scale": 1
 		    }, {
 		    	"type": "text",
-		    	"text": "Mighty Mighty Movember!",
+		    	"text": "The quick brown fox jumped over the black dog!  To be, or not to be, that is the question.  Whether it is nobler in the mind to suffer the slings and arrows of outrageous fortune.  Or to take arms, and by opposing end them.",
 		    	"x": 530,
 		    	"y": 370,
+		    	"lineWidth": 200,
 		    	"rotation": -25,
 		    	"color": "#9EACAB",
 		    	"font": "25px Arial"
@@ -104,18 +105,28 @@
 		    }, {
 		    	"type": "image",
 		    	"src": "src/app/client/images/NC-Corporate-Logo1.png",
-		    	"rotation": -25,
-		    	"x": 600,
+		    	"rotation": 0,
+		    	"x": 450,
 		    	"y": 250,
 		    	"scale": 1
 		    }, {
 		    	"type": "text",
-		    	"text": "Healthy Options",
-		    	"x": 465,
-		    	"y": 340,
-		    	"rotation": -25,
+		    	"text": "                  The quick brown fox jumped over the lazy black dog!  To be, or not to be, that is the question.  Whether it is nobler in the mind to suffer the slings and arrows of outrageous fortune.  Or to take arms, and by opposing end them.",
+		    	"x": 285,
+		    	"y": 275,
+		    	"lineWidth": 400,
+		    	"rotation": 0,
 		    	"color": "#9EACAB",
 		    	"font": "25px Arial"
+		    }, {
+		    	"type": "text",
+		    	"text": "Warning:",
+		    	"x": 285,
+		    	"y": 275,
+		    	"lineWidth": 400,
+		    	"rotation": 0,
+		    	"color": "#FF0000",
+		    	"font": "bold 25px Arial"
 		    }
 	    ]
 	}
