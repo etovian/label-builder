@@ -16,9 +16,9 @@
 					.beginFill(data.color)
 					.drawRect(data.x, data.y, data.width, data.height);
 				rectangle.rotation = data.rotation;
-				rectangle.x = rectangle.regX = data.x;
-				rectangle.y = rectangle.regY = data.y;
-
+				rectangle.x = data.x;
+				rectangle.y = data.y;
+				rectangle.setBounds(data.x, data.y, data.width, data.height);
 				return rectangle;
 			}
 		};

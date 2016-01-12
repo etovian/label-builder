@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Label>
+    <LabelId>102425</LabelId>
+    <ProductId>4022083</ProductId>
+    <VersionMajor>1</VersionMajor>
+    <VersionMinor>6</VersionMinor>
+    <Date>8/27/2013 at 16:16:17</Date>
+    <DieId>32</DieId>
+    <TargetGroupId>1</TargetGroupId>
+    <Setup>
+        <DieSize>250cc</DieSize>
+        <LabelWidth>7.77</LabelWidth>
+        <LabelHeight>2.812</LabelHeight>
+        <FrontPanelImageWidth>3.053</FrontPanelImageWidth>
+        <FrontPanelImageHeight>3.061</FrontPanelImageHeight>
+        <FrontPanelTopBumpHeight>0</FrontPanelTopBumpHeight>
+        <BackPanelRotation>90</BackPanelRotation>
+        <BackPanelMargins>
+            <Top>0.033</Top>
+            <Left>0.115</Left>
+            <Right>0.115</Right>
+            <Bottom>0.375</Bottom>
+        </BackPanelMargins>
+        <BackPanelDividerMargin>0.25</BackPanelDividerMargin>
+        <ColumnDividerMargin>0.25</ColumnDividerMargin>
+        <SupplementalFactsColumnWidths>
+            <AmtPerServingWidth>0.538</AmtPerServingWidth>
+            <DailyValuePctWidth>0.377</DailyValuePctWidth>
+        </SupplementalFactsColumnWidths>
+        <NutritionalFactsColumnWidths>
+            <DailyValuePctWidth>0.377</DailyValuePctWidth>
+            <AmtPerServingWidth>0.432</AmtPerServingWidth>
+        </NutritionalFactsColumnWidths>
+        <FontFamily>HelveticaNeueCondensed</FontFamily>
+        <TextAlignment>justify</TextAlignment>
+        <FactsBoxFontSize>7.75</FactsBoxFontSize>
+        <FactsBoxLineHeight>8.5</FactsBoxLineHeight>
+        <IngredientTrademarkFontSize>4.5</IngredientTrademarkFontSize>
+        <IngredientTrademarkLineHeight>5.5</IngredientTrademarkLineHeight>
+        <MfgInfoFontSize>6</MfgInfoFontSize>
+        <MfgInfoLineHeight>7</MfgInfoLineHeight>
+        <MfgInfoDisplayFormat>
+            <FourLines />
+        </MfgInfoDisplayFormat>
+        <UpcFontSize>27</UpcFontSize>
+        <UseByFontSize>4.5</UseByFontSize>
+        <UseByLineHeight>5</UseByLineHeight>
+        <BodyTextFontSize>7.75</BodyTextFontSize>
+        <BodyTextLineHeight>8.5</BodyTextLineHeight>
+        <FactsBoxHeaderFontSize>13</FactsBoxHeaderFontSize>
+        <FactsBoxHeaderLineHeight>14</FactsBoxHeaderLineHeight>
+        <ServingInfoFontSize>8</ServingInfoFontSize>
+        <ServingInfoLineHeight>8</ServingInfoLineHeight>
+        <Border>
+            <BorderWidth>0</BorderWidth>
+            <TopInset>0</TopInset>
+            <LeftInset>0</LeftInset>
+            <RightInset>0</RightInset>
+        </Border>
+        <BulletSpaceBefore>0</BulletSpaceBefore>
+        <BulletSpaceAfter>0.5</BulletSpaceAfter>
+        <SubNutritionalSeparators>false</SubNutritionalSeparators>
+        <CalorieComparisonColumnWidths>
+            <CalorieComparisonLowWidth>0.6</CalorieComparisonLowWidth>
+            <CalorieComparisonHighWidth>0.6</CalorieComparisonHighWidth>
+            <CalorieComparisonLessThanWidth>0.8</CalorieComparisonLessThanWidth>
+        </CalorieComparisonColumnWidths>
+        <CalorieComparisonFontSize>6</CalorieComparisonFontSize>
+        <CalorieComparisonLineHeight>7</CalorieComparisonLineHeight>
+        <ContinuedFontSize>8</ContinuedFontSize>
+        <ContinuedLineHeight>4</ContinuedLineHeight>
+        <BodyFontColor>#000000</BodyFontColor>
+        <BodyFillColor>#FFFFFF</BodyFillColor>
+        <PhoneFontColor>#000000</PhoneFontColor>
+        <PhoneFillColor>#FFFFFF</PhoneFillColor>
+        <DirectionsFontColor>#000000</DirectionsFontColor>
+        <DirectionsFillColor>#FFFFFF</DirectionsFillColor>
+        <CautionFontColor>#000000</CautionFontColor>
+        <CautionFillColor>#FFFFFF</CautionFillColor>
+        <WarningFontColor>#000000</WarningFontColor>
+        <WarningFillColor>#FFFFFF</WarningFillColor>
+        <FactsBoxFontColor>#000000</FactsBoxFontColor>
+        <FactsBoxFillColor />
+        <OtherIngredientsFontColor>#000000</OtherIngredientsFontColor>
+        <OtherIngredientsFillColor>#FFFFFF</OtherIngredientsFillColor>
+        <DiscussionFontColor>#000000</DiscussionFontColor>
+        <DiscussionFillColor>#FFFFFF</DiscussionFillColor>
+        <GuaranteeFontColor>#000000</GuaranteeFontColor>
+        <GuaranteeFillColor>#FFFFFF</GuaranteeFillColor>
+        <TrademarksFontColor>#000000</TrademarksFontColor>
+        <TrademarksFillColor>#FFFFFF</TrademarksFillColor>
+        <SloganFontColor>#000000</SloganFontColor>
+        <SloganFillColor>#FFFFFF</SloganFillColor>
+        <PromoFontColor>#000000</PromoFontColor>
+        <PromoFillColor>#FFFFFF</PromoFillColor>
+        <DisclaimerFontColor>#000000</DisclaimerFontColor>
+        <DisclaimerFillColor>#FFFFFF</DisclaimerFillColor>
+        <RecipesFontColor>#000000</RecipesFontColor>
+        <RecipesFillColor>#FFFFFF</RecipesFillColor>
+        <DietPlanFontColor>#000000</DietPlanFontColor>
+        <DietPlanFillColor>#FFFFFF</DietPlanFillColor>
+        <BottomContentFontColor>#000000</BottomContentFontColor>
+        <BottomContentFillColor>#FFFFFF</BottomContentFillColor>
+        <UPCFontColor>#000000</UPCFontColor>
+        <UPCFillColor>#FFFFFF</UPCFillColor>
+        <CapsuleSizeFontColor>#000000</CapsuleSizeFontColor>
+        <CapsuleSizeFillColor>#FFFFFF</CapsuleSizeFillColor>
+        <Constants>
+            <APS_ALIGNMENT_BASE_WIDTH>0.25</APS_ALIGNMENT_BASE_WIDTH>
+            <BAR_CODE_FONT_SIZE_NORMAL>27</BAR_CODE_FONT_SIZE_NORMAL>
+            <BAR_CODE_FONT_SIZE_SMALL>24</BAR_CODE_FONT_SIZE_SMALL>
+            <BAR_CODE_FONT_SIZE_TINY>18</BAR_CODE_FONT_SIZE_TINY>
+            <BAR_CODE_WIDTH_NORMAL>1.13</BAR_CODE_WIDTH_NORMAL>
+            <BAR_CODE_WIDTH_SMALL>1.03</BAR_CODE_WIDTH_SMALL>
+            <BAR_CODE_WIDTH_TINY>0.7</BAR_CODE_WIDTH_TINY>
+            <BLEED>0.125</BLEED>
+            <BODY_TEXT_MAX_FONT_SIZE>8</BODY_TEXT_MAX_FONT_SIZE>
+            <BODY_TEXT_MAX_LINE_HEIGHT>9</BODY_TEXT_MAX_LINE_HEIGHT>
+            <BODY_TEXT_MIN_FONT_SIZE>4</BODY_TEXT_MIN_FONT_SIZE>
+            <BODY_TEXT_MIN_LINE_HEIGHT>4.5</BODY_TEXT_MIN_LINE_HEIGHT>
+            <BORDERED_SECTION_BORDER_WIDTH>0.5</BORDERED_SECTION_BORDER_WIDTH>
+            <BORDERED_SECTION_MARGINS>0.02</BORDERED_SECTION_MARGINS>
+            <COLUMN_MIN_WIDTH>0.6</COLUMN_MIN_WIDTH>
+            <CROP_MARK>0.25</CROP_MARK>
+            <CROP_MARK_GAP>0.25</CROP_MARK_GAP>
+            <CROP_MARK_LENGTH>0.5</CROP_MARK_LENGTH>
+            <CUSTOM_INGREDIENT_FOOTNOTE_ID>1</CUSTOM_INGREDIENT_FOOTNOTE_ID>
+            <DATE_STAMP_SPACE>0.187</DATE_STAMP_SPACE>
+            <DEFAULT_TEXT_FONT_SIZE>6</DEFAULT_TEXT_FONT_SIZE>
+            <DEFAULT_TEXT_LINE_HEIGHT>7</DEFAULT_TEXT_LINE_HEIGHT>
+            <DEFAULT_WEBSITE>www.nutraceutical.com</DEFAULT_WEBSITE>
+            <FACTS_BOX_BASE_FONT_SIZE>6</FACTS_BOX_BASE_FONT_SIZE>
+            <FACTS_BOX_BODY_DELINEATOR_WIDTH>7</FACTS_BOX_BODY_DELINEATOR_WIDTH>
+            <FACTS_BOX_BOLD_FONT>HelveticaNeue-BoldCond</FACTS_BOX_BOLD_FONT>
+            <FACTS_BOX_BORDER_WIDTH>0.5</FACTS_BOX_BORDER_WIDTH>
+            <FACTS_BOX_BOTTOM_MARGIN>0.03</FACTS_BOX_BOTTOM_MARGIN>
+            <FACTS_BOX_CONTENT_MIN_WIDTH>0.5</FACTS_BOX_CONTENT_MIN_WIDTH>
+            <FACTS_BOX_INSIDE_MARGIN>0.115</FACTS_BOX_INSIDE_MARGIN>
+            <FACTS_BOX_FONT_FAMILY>HelveticaNeue-LightCond</FACTS_BOX_FONT_FAMILY>
+            <FACTS_BOX_HEADER_FONT_FAMILY>Helvetica-Black</FACTS_BOX_HEADER_FONT_FAMILY>
+            <FACTS_BOX_HEADER_MIN_FONT_SIZE>10</FACTS_BOX_HEADER_MIN_FONT_SIZE>
+            <FACTS_BOX_HEADER_MAX_FONT_SIZE>18</FACTS_BOX_HEADER_MAX_FONT_SIZE>
+            <FACTS_BOX_HEADER_MIN_LINE_HEIGHT>11</FACTS_BOX_HEADER_MIN_LINE_HEIGHT>
+            <FACTS_BOX_HEADER_MAX_LINE_HEIGHT>18</FACTS_BOX_HEADER_MAX_LINE_HEIGHT>
+            <FACTS_BOX_ITEM_SEPARATOR_WIDTH>0.5</FACTS_BOX_ITEM_SEPARATOR_WIDTH>
+            <FACTS_BOX_LEFT_MARGIN>0.03</FACTS_BOX_LEFT_MARGIN>
+            <FACTS_BOX_OBLIQUE_FONT>HelveticaNeue-LightCondObl</FACTS_BOX_OBLIQUE_FONT>
+            <FACTS_BOX_RIGHT_MARGIN>0.03</FACTS_BOX_RIGHT_MARGIN>
+            <FACTS_BOX_RULE_PADDING>0.5</FACTS_BOX_RULE_PADDING>
+            <FACTS_BOX_SECTION_SEPARATOR_WIDTH>3</FACTS_BOX_SECTION_SEPARATOR_WIDTH>
+            <FACTS_BOX_TOP_MARGIN>0.03</FACTS_BOX_TOP_MARGIN>
+            <ID_AND_VERSION_OFFSET>0.5</ID_AND_VERSION_OFFSET>
+            <INGREDIENTS_COLUMN_INDENT>0.05</INGREDIENTS_COLUMN_INDENT>
+            <INGREDIENTS_COLUMN_RIGHT_PADDING>0.02</INGREDIENTS_COLUMN_RIGHT_PADDING>
+            <INGREDIENTS_MAX_FONT_SIZE>12</INGREDIENTS_MAX_FONT_SIZE>
+            <INGREDIENTS_MAX_LINE_HEIGHT>13</INGREDIENTS_MAX_LINE_HEIGHT>
+            <INGREDIENTS_MIN_FONT_SIZE>4.5</INGREDIENTS_MIN_FONT_SIZE>
+            <INGREDIENTS_MIN_LINE_HEIGHT>5</INGREDIENTS_MIN_LINE_HEIGHT>
+            <LABEL_INFO_BOX_BORDER_WIDTH>0.5</LABEL_INFO_BOX_BORDER_WIDTH>
+            <LABEL_INFO_BOX_FONT_FAMILY>GillSans</LABEL_INFO_BOX_FONT_FAMILY>
+            <LABEL_INFO_BOX_FONT_SIZE>12</LABEL_INFO_BOX_FONT_SIZE>
+            <LABEL_INFO_BOX_LINE_HEIGHT>14</LABEL_INFO_BOX_LINE_HEIGHT>
+            <LABEL_INFO_BOX_SPACE_ABOVE>0.5</LABEL_INFO_BOX_SPACE_ABOVE>
+            <LABEL_INFO_BOX_WIDTH>2</LABEL_INFO_BOX_WIDTH>
+            <LABEL_INFO_VALUES_INDENT>0.125</LABEL_INFO_VALUES_INDENT>
+            <LABEL_INFO_VALUES_NUMBER_OF_LINES>8</LABEL_INFO_VALUES_NUMBER_OF_LINES>
+            <LOCK_REFRESH_SECONDS>30000</LOCK_REFRESH_SECONDS>
+            <LOGO_HEIGHT>0.4</LOGO_HEIGHT>
+            <LOGO_SPACER>0.156</LOGO_SPACER>
+            <LOGO_WIDTH>0.4</LOGO_WIDTH>
+            <MFG_INFO_FONT_FAMILY>GillSans</MFG_INFO_FONT_FAMILY>
+            <MFG_INFO_MAX_FONT_SIZE>6</MFG_INFO_MAX_FONT_SIZE>
+            <MFG_INFO_MAX_LINE_HEIGHT>7</MFG_INFO_MAX_LINE_HEIGHT>
+            <MFG_INFO_MIN_FONT_SIZE>4</MFG_INFO_MIN_FONT_SIZE>
+            <MFG_INFO_MIN_LINE_HEIGHT>4.5</MFG_INFO_MIN_LINE_HEIGHT>
+            <PAGE_BOTTOM_MARGIN>0.5</PAGE_BOTTOM_MARGIN>
+            <PAGE_LEFT_MARGIN>0.5</PAGE_LEFT_MARGIN>
+            <PAGE_RIGHT_MARGIN>0.5</PAGE_RIGHT_MARGIN>
+            <PAGE_TOP_MARGIN>0.5</PAGE_TOP_MARGIN>
+            <PDV_ALIGNMENT_BASE_WIDTH>0.25</PDV_ALIGNMENT_BASE_WIDTH>
+            <SERVING_INFO_FONT_FAMILY>HelveticaNeue-Bold</SERVING_INFO_FONT_FAMILY>
+            <SERVING_INFO_MIN_FONT_SIZE>7</SERVING_INFO_MIN_FONT_SIZE>
+            <SERVING_INFO_MAX_FONT_SIZE>12</SERVING_INFO_MAX_FONT_SIZE>
+            <SERVING_INFO_MIN_LINE_HEIGHT>7</SERVING_INFO_MIN_LINE_HEIGHT>
+            <SERVING_INFO_MAX_LINE_HEIGHT>12</SERVING_INFO_MAX_LINE_HEIGHT>
+            <TEXT_SECTION_SPACER_HEIGHT>0.03</TEXT_SECTION_SPACER_HEIGHT>
+            <TRADEMARK_DEFAULT_FONT_SIZE>4.5</TRADEMARK_DEFAULT_FONT_SIZE>
+            <TRADEMARK_DEFAULT_LINE_HEIGHT>5.5</TRADEMARK_DEFAULT_LINE_HEIGHT>
+            <TRADEMARK_MAX_FONT_SIZE>6</TRADEMARK_MAX_FONT_SIZE>
+            <TRADEMARK_MAX_LINE_HEIGHT>7</TRADEMARK_MAX_LINE_HEIGHT>
+            <TRADEMARK_MIN_FONT_SIZE>3.5</TRADEMARK_MIN_FONT_SIZE>
+            <TRADEMARK_MIN_LINE_HEIGHT>4</TRADEMARK_MIN_LINE_HEIGHT>
+            <UPC_ALIGNMENT>after</UPC_ALIGNMENT>
+            <USE_BY_FONT_FAMILY>GillSans</USE_BY_FONT_FAMILY>
+            <USE_BY_LABEL>USE BY:</USE_BY_LABEL>
+            <USE_BY_MAX_FONT_SIZE>6</USE_BY_MAX_FONT_SIZE>
+            <USE_BY_MAX_LINE_HEIGHT>7</USE_BY_MAX_LINE_HEIGHT>
+            <USE_BY_MIN_FONT_SIZE>4</USE_BY_MIN_FONT_SIZE>
+            <USE_BY_MIN_LINE_HEIGHT>4.5</USE_BY_MIN_LINE_HEIGHT>
+            <USE_BY_TOP_MARGIN>0.02</USE_BY_TOP_MARGIN>
+            <WARNING_BOX_SPACE_BELOW>0.02</WARNING_BOX_SPACE_BELOW>
+            <PEEL_OFF_TAB_TEXT>LIFT HERE</PEEL_OFF_TAB_TEXT>
+            <PEEL_OFF_TAB_FONT_SIZE>10</PEEL_OFF_TAB_FONT_SIZE>
+            <PEEL_OFF_TAB_BASE_WIDTH>1.0667</PEEL_OFF_TAB_BASE_WIDTH>
+            <PEEL_OFF_TAB_TIP_WIDTH>0.7889</PEEL_OFF_TAB_TIP_WIDTH>
+            <PEEL_OFF_TAB_BREADTH>0.29</PEEL_OFF_TAB_BREADTH>
+            <PEEL_OFF_ADDITIONAL_SUPP_FACTS>LIFT TAB FOR ADDITIONAL SUPPLEMENT FACTS</PEEL_OFF_ADDITIONAL_SUPP_FACTS>
+            <PEEL_OFF_ADDITIONAL_NUTR_FACTS>LIFT TAB FOR ADDITIONAL NUTRITION FACTS</PEEL_OFF_ADDITIONAL_NUTR_FACTS>
+            <PEEL_OFF_SUPP_FACTS_CONTINUED>Supplement Facts (cont.)</PEEL_OFF_SUPP_FACTS_CONTINUED>
+            <PEEL_OFF_NUTR_FACTS_CONTINUED>Nutrition Facts (cont.)</PEEL_OFF_NUTR_FACTS_CONTINUED>
+            <PEEL_OFF_CONTINUED_MAX_FONT_SIZE>12</PEEL_OFF_CONTINUED_MAX_FONT_SIZE>
+            <PEEL_OFF_CONTINUED_MAX_LINE_HEIGHT>12</PEEL_OFF_CONTINUED_MAX_LINE_HEIGHT>
+            <PEEL_OFF_CONTINUED_MIN_FONT_SIZE>5</PEEL_OFF_CONTINUED_MIN_FONT_SIZE>
+            <PEEL_OFF_CONTINUED_MIN_LINE_HEIGHT>8</PEEL_OFF_CONTINUED_MIN_LINE_HEIGHT>
+            <PEEL_OFF_TEXT_COLOR>#999999</PEEL_OFF_TEXT_COLOR>
+        </Constants>
+        <IsPeelOff>false</IsPeelOff>
+    </Setup>
+    <Brand>
+        <BrandName>Natures Life</BrandName>
+        <BrandCode>NL</BrandCode>
+    </Brand>
+    <ProductName>
+        <Title>A 25,000 IU/D 1,000 IU</Title>
+    </ProductName>
+    <FrontPanel>
+        <FPGraphicalData>
+            <MainGraphic Source="images/NL/4022083-250cc.pdf" />
+        </FPGraphicalData>
+        <FPTextualData>
+            <ContentCount>250</ContentCount>
+            <DeliveryForm>
+                <Text>Softgels</Text>
+            </DeliveryForm>
+            <DosageConsistency />
+            <GenericDescription />
+        </FPTextualData>
+    </FrontPanel>
+    <BackPanel>
+        <ContactInfo>
+            <PhoneNumber />
+            <WebSite />
+        </ContactInfo>
+        <CompanyInfo Height="0.107638888888889" Prefix="Mfd. by">
+            <Name>NutraPure, Inc.</Name>
+            <WebSite>www.reachforlife.com</WebSite>
+        </CompanyInfo>
+        <ManufacturedInfo>
+            <ManufacturedBy>Mfd. by NutraPure, Inc.</ManufacturedBy>
+            <ManufacturedFor Id="14">Nature's Life</ManufacturedFor>
+            <ManufacturedAddress>
+                <City>Park City</City>
+                <State>UT</State>
+                <PostalCd>84098</PostalCd>
+                <Country>USA</Country>
+                <Phone>(800) 247-6997</Phone>
+                <Website>www.natureslife.com</Website>
+            </ManufacturedAddress>
+            <Copyright>
+                <CopyrightDate>2009</CopyrightDate>
+                <CopyrightOwner />
+            </Copyright>
+        </ManufacturedInfo>
+        <UPCCode>040647792678</UPCCode>
+        <BrandItemRevDateCode>0813</BrandItemRevDateCode>
+        <BPTextualData Width="2.812">
+            <TextSection>
+                <TextColumn Width="2.582">
+                    <Warning id="0">
+                        <FormattedText>Do not use if safety seal is broken or missing.  Keep out of reach of children. Keep your licensed health care practitioner informed when using this product.</FormattedText>
+                    </Warning>
+                    <Directions>
+                        <FormattedText>Use only as directed. Take one (1) capsule daily with food.</FormattedText>
+                        <Refrigerated Id="13">Store in a cool, dry place.</Refrigerated>
+                    </Directions>
+                </TextColumn>
+            </TextSection>
+            <TextSection>
+                <TextColumn Width="2.582">
+                    <SupplementFoodInfo>
+                        <SupplementFactsBox Width="2.522">
+                            <Header>Supplement Facts</Header>
+                            <APS_Column_Labels>
+                                <ColumnLabel align="center">
+                                    Amount Per
+                                    <BR />
+                                    Serving
+                                </ColumnLabel>
+                            </APS_Column_Labels>
+                            <PDV_Column_Labels>
+                                <ColumnLabel align="center">
+                                    % Daily
+                                    <BR />
+                                    Value
+                                </ColumnLabel>
+                            </PDV_Column_Labels>
+                            <ServingSize>1</ServingSize>
+                            <DeliveryForm>
+                                <Text>Vegetarian Cap</Text>
+                            </DeliveryForm>
+                            <Ingredient>
+                                <IngredientId>17</IngredientId>
+                                <IngredCategoryId>5</IngredCategoryId>
+                                <CategoryType>VM</CategoryType>
+                                <IngredientName>
+                                    <FormattedText>Vitamin A</FormattedText>
+                                </IngredientName>
+                                <SourceName>
+                                    <FormattedText>(60% as Beta Carotene, 40% as Fish Liver Oil)</FormattedText>
+                                </SourceName>
+                                <AmountPerServing>
+                                    <Quantity ZeroCeiling="49.9999">25,000</Quantity>
+                                    <UnitCode>IU</UnitCode>
+                                    <UnitDisplay>IU</UnitDisplay>
+                                </AmountPerServing>
+                                <PercentDailyValue>
+                                    <Value>500%</Value>
+                                </PercentDailyValue>
+                            </Ingredient>
+                            <Ingredient>
+                                <IngredientId>19</IngredientId>
+                                <IngredCategoryId>5</IngredCategoryId>
+                                <CategoryType>VM</CategoryType>
+                                <IngredientName>
+                                    <FormattedText>Vitamin D</FormattedText>
+                                </IngredientName>
+                                <SourceName DisplayType="">
+                                    <FormattedText>(as Cholecalciferol) (fish)</FormattedText>
+                                </SourceName>
+                                <AmountPerServing>
+                                    <Quantity ZeroCeiling="3.9999">1,000</Quantity>
+                                    <UnitCode>IU</UnitCode>
+                                    <UnitDisplay>IU</UnitDisplay>
+                                </AmountPerServing>
+                                <PercentDailyValue>
+                                    <Value>250%</Value>
+                                </PercentDailyValue>
+                            </Ingredient>
+                        </SupplementFactsBox>
+                    </SupplementFoodInfo>
+                </TextColumn>
+            </TextSection>
+            <TextSection>
+                <TextColumn Width="2.582">
+                    <OtherIngredients Continued="false">
+                        <FormattedText>
+                            <Bold>Other Ingredients:</Bold>
+                            Vegetarian Capsule, Cellulose, Calcium Phosphate, Magnesium Stearate.
+                        </FormattedText>
+                    </OtherIngredients>
+                    <Discussion Continued="false">
+                        <FormattedText>Vitamin A is intended to provide nutritive support for healthy skin, bones, teeth and eyesight, in addition to antioxidant protection.  Vitamin D, also called Sunshine Vitamin, is an essential nutrient for healthy skeletal development and bone mineralization.</FormattedText>
+                    </Discussion>
+                    <BrandGuarantee>
+                        <FormattedText>
+                            Nature's Life guarantees that NO ingredients other than those listed on this label have been added to this product. This quality Nature's Life
+                            <RegisteredTrademark />
+                            product meets our Quality Assurance Procedures and Good Manufacturing Practices.
+                        </FormattedText>
+                    </BrandGuarantee>
+                    <BrandSlogan>
+                        <FormattedText>
+                            <Bold>
+                                Quality You Can Trust
+                                <Trademark />
+                            </Bold>
+                        </FormattedText>
+                    </BrandSlogan>
+                </TextColumn>
+            </TextSection>
+        </BPTextualData>
+    </BackPanel>
+</Label>

@@ -3,6 +3,7 @@
 	'use strict';
 
 	var deps = [
+		'BackPanelService',
 		'CircleService', 
 		'ImageService',
 		'RectangleService',
@@ -11,7 +12,7 @@
 	];
 	angular.module('app').factory('LabelComponentService', deps);
 
-	function LabelComponentService(circleService, imageService, rectangleService, textService) {
+	function LabelComponentService(backPanelService, circleService, imageService, rectangleService, textService) {
 
 		return {
 			getCircle: function(data) {
@@ -35,6 +36,9 @@
 			},
 			getText: function(data) {
 				return textService.getText(data);
+			},
+			getBackPanel: function(data) {
+				return backPanelService.getComponent(data);
 			}
 		};
 	}

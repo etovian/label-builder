@@ -13,6 +13,7 @@
 				text.x = data.x;
 				text.y = data.y;
 				text.rotation = data.rotation;
+				text.lineWidth = data.lineWidth;
 				return text;
 			}
 		};

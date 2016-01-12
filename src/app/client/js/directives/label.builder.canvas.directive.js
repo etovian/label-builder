@@ -44,14 +44,49 @@
 		var vm = this;
 		angular.extend(vm, {
 			dragStart: null,
+			renderedLabel: null,
 			isMousedown: false,
 			offset: {
 				x: 0,
 				y: 0
 			},
+			rotation: 0,
 			scale: 1,
 			update: true,
+			zoomInput: 100,
 			zoomOptions: staticDataService.getZoomOptions(),
+			centerOnRenderedLabel: function() {
+				var stageBounds = vm.stage.getBounds();
+				var stageWidth = stageBounds.width;
+				var stageHeight = stageBounds.height;
+				var labelBounds = vm.renderedLabel.getBounds();
+				var labelWidth = labelBounds.width;
+				var labelHeight = labelBounds.height;
+				var canvasWidth = vm.canvas.width;
+				var canvasHeight = vm.canvas.height;
+
+				var offsetX = (canvasWidth - Math.round((labelWidth / 2))) * -1;
+				var offsetY = (canvasHeight - Math.round((labelHeight / 2))) * -1;
+
+				angular.extend(vm.stage, {
+					regX: offsetX,
+					regY: offsetY
+				});
+
+				// vm.clearOffset();
+				angular.extend(vm.offset, {
+					x: vm.offset.x + offsetX,
+					y: vm.offset.y + offsetY
+				});
+
+				vm.stage.update();
+			},
+			clearOffset: function() {
+				angular.extend(vm.offset, {
+					x: 0,
+					y: 0
+				});
+			},
 			getDefaultZoom: function() {
 				return vm.zoomOptions[2]; //TODO: make this less yucky.
 			},
@@ -92,20 +127,33 @@
 				vm.isMousedown = false;
 				vm.updateOffset($event);
 			},
+			// render: function() {
+			// 	if(vm.stage && vm.nutraLabel) {
+
+			// 		vm.stage.removeAllChildren(); //repaints make elements fuzzy if existing elements are not removed
+
+			// 		function iterate(componentData) {
+
+			// 			$q.resolve(labelComponentService.getComponent(componentData)).then(function(component) {
+			// 				vm.stage.addChild(component);
+			// 				vm.stage.update();
+			// 			});
+			// 		}
+
+			// 		vm.nutraLabel.components.forEach(iterate);
+			// 	}
+			// },
 			render: function() {
+				
 				if(vm.stage && vm.nutraLabel) {
 
 					vm.stage.removeAllChildren(); //repaints make elements fuzzy if existing elements are not removed
-
-					function iterate(componentData) {
-
-						$q.resolve(labelComponentService.getComponent(componentData)).then(function(component) {
-							vm.stage.addChild(component);
-							vm.stage.update();
-						});
-					}
-
-					vm.nutraLabel.components.forEach(iterate);
+					$q.resolve(labelComponentService.getBackPanel(vm.nutraLabel)).then(function(backPanel) {
+						vm.renderedLabel = backPanel;
+						vm.stage.addChild(backPanel);
+						vm.stage.update();
+					});
+					
 				}
 			},
 			resetView: function() {
@@ -122,6 +170,15 @@
 					y: 0
 				});
 			},
+			toggleRotation: function() {
+				if(vm.renderedLabel.rotation === 0) {
+					vm.renderedLabel.rotation = -90;
+				} else {
+					vm.renderedLabel.rotation = 0;
+				}
+				// vm.centerOnRenderedLabel();
+				vm.stage.update();
+			},
 			tick: function(event) {
 				if(vm.stage  && vm.update) {
 					vm.render();
@@ -137,33 +194,19 @@
       			vm.offset.y += offsetY;	
 			},
 			zoom: function(factor) {
-				vm.stage.scaleX = factor;
-				vm.stage.scaleY = factor;
+				// vm.stage.scaleX = factor;
+				// vm.stage.scaleY = factor;
+				// vm.stage.update();
+				// return factor;
+				vm.renderedLabel.scaleX = factor;
+				vm.renderedLabel.scaleY = factor;
 				vm.stage.update();
 				return factor;
 			},
-			zoomIn: function() {
-				var currIndex = vm.zoomOptions.indexOf(vm.scale);
-				var nextIndex = ++currIndex;
-				var zoomLevel = vm.zoomOptions[nextIndex];
-				if(zoomLevel) {
-					vm.scale = vm.zoomOptions[nextIndex];
-					vm.zoom(vm.scale.value);
-				} else {
-					notificationService.addError("You have achieved maximum zoominess.");
-				}
+			zoomInputChange: function() {
+				var factor = vm.zoomInput / 100;
+				vm.zoom(factor);
 			},
-			zoomOut: function() {
-				var currIndex = vm.zoomOptions.indexOf(vm.scale);
-				var nextIndex = --currIndex;
-				if(nextIndex >= 0) {
-					var zoomLevel = vm.zoomOptions[nextIndex];
-					vm.scale = vm.zoomOptions[nextIndex];
-					vm.zoom(vm.scale.value);
-				} else {
-					notificationService.addError("You have achieved minimum zoominess.");
-				}
-			}
 		});
 
 		vm.scale = vm.getDefaultZoom(); //TODO: make this less yucky.

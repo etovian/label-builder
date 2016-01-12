@@ -13,6 +13,14 @@
 			return LabelService.requestLabels();
 		}
 
+		function existingLabelsPrepService(LabelService) {
+			return LabelService.requestExistingLabelSummaries();
+		}
+
+		function selectedLabelPrepService(LabelService, $route) {
+			return LabelService.requestLabelById($route.current.params.labelId);
+		}
+		
 		$routeProvider
 			.when('/welcome', {
 				templateUrl: templatesPath + 'welcome.html',
@@ -24,7 +32,7 @@
 				controller: 'LabelListController',
 				controllerAs: 'vm',
 				resolve: {
-					labelsPrepService: labelsPrepService
+					existingLabelsPrepService: existingLabelsPrepService
 				}
 			})
 			.when('/label-add', {
@@ -33,6 +41,19 @@
 				controllerAs: 'vm',
 				resolve: {
 					labelsPrepService: labelsPrepService
+				}
+			})
+			.when('/ingredients', {
+				templateUrl: templatesPath + 'ingredients.html',
+				controller: 'IngredientsController',
+				controllerAs: 'vm'
+			})
+			.when('/ingredients/labelId/:labelId', {
+				templateUrl: templatesPath + 'ingredients.html',
+				controller: 'IngredientsController',
+				controllerAs: 'vm',
+				resolve: {
+					selectedLabelPrepService: selectedLabelPrepService
 				}
 			})
 			.when('/label-edit', {
