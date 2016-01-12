@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Font Colors</h2>
+        </div>
+    </div>
+    <!-- header row -->
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-3">
+            <p class="lead">Text</p>
+        </div>
+        <div class="col-md-3">
+            <p class="lead">Background</p>
+        </div>
+        <div class="col-md-2">
+            <p class="lead">???</p>
+        </div>
+    </div>
+	
+	<!-- font colors -->
+    <div class="row">
+        <div class="col-md-4">
+			Facts Box
+        </div>
+        <div class="col-md-3">
+        	<div class="input-group">
+        		<input colorpicker type="text" ng-model="vm.getFontColors().FactsBoxFontColor" colorpicker-position="bottom" class="form-control"/>
+        		<span class="input-group-addon" style="background-color: {{ vm.getFontColors().FactsBoxFontColor }}">
+        			<span class="glyphicon glyphicon-tint"></span>		
+        		</span>
+        		
+        	</div>
+        	
+        </div>
+        <div class="col-md-3">
+        	<input colorpicker type="text" colorpicker-position="bottom" class="form-control"/>
+        </div>
+        <div class="col-md-2">
+        	<input type="checkbox">
+        </div>
+    </div>
+</div>

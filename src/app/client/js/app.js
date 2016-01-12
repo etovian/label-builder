@@ -7,7 +7,8 @@
 		'ngAside', 
 		'ui.grid', 
 		'ui.grid.selection',
-		'ui.grid.resizeColumns'
+		'ui.grid.resizeColumns',
+		'colorpicker.module'
 	];
 
 	angular.module('app', deps);

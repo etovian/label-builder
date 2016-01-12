@@ -136,6 +136,28 @@
 				vm.isMousedown = false;
 				vm.updateOffset($event);
 			},
+			openEditInformationModal: function() {
+				var opts = {
+					templateUrl: 'templates/' + 'edit.information.html',
+					controller: 'EditInformationController',
+					controllerAs: 'vm',
+					placement: 'right',
+					size: 'sm'
+				};
+
+				$aside.open(opts);
+			},
+			openFontColorsModal: function() {
+				var opts = {
+					templateUrl: 'templates/' + 'font.colors.html',
+					controller: 'FontColorsController',
+					controllerAs: 'vm',
+					placement: 'right',
+					size: 'md'
+				};
+
+				$aside.open(opts);
+			},
 			openFontSizesModal: function() {
 				var opts = {
 					templateUrl: 'templates/' + 'font.sizes.html',
