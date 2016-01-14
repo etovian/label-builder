@@ -2,8 +2,7 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<input ng-model="vm.diagram.scale" type="number" min="1" max="3" step="0.1">
-			<input ng-model="vm.renderedLabel.angle" type="number" min="0" max="360" step="1">
+			<canvas-toolbar nutra-label="vm.nutraLabel" go-diagram="vm.diagram" go-rendered-label="vm.renderedLabel"></canvas-toolbar>
 		</div>
 	</div>
 	<div class="row">

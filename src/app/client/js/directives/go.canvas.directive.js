@@ -41,6 +41,7 @@
 
 		function GoCanvasDirectiveController($interval) {
 
+			var $m = go.GraphObject.make;
 			var vm = this;
 			angular.extend(vm, {
 				isUpdate: true,
@@ -111,6 +112,28 @@
 							vm.renderedLabel.add(scaffold);
 							vm.diagram.add(vm.renderedLabel);
 
+
+
+							var node2 =
+							    $m(go.Node, "Auto",
+							      $m(go.Shape,
+							        { figure: "RoundedRectangle",
+							          fill: "pink" }),
+							      $m(go.TextBlock,
+							        { text: "Note: Maybe a more specific warning and directions?",
+							          margin: 5 })
+							    );
+						  	
+						  	var link = $m(go.Link, { 
+						  		fromNode: node2, toNode: vm.renderedLabel },
+								$m(go.Shape),
+								$m(go.Shape, { toArrow: 'OpenTriangle', fill: null})
+							);
+
+						  	vm.diagram.add(node2);
+						  	vm.diagram.add(link);
+
+
 							vm.isUpdate = false;
 						}
 					} catch(ex) {
@@ -119,7 +142,7 @@
 						vm.isUpdate = false;
 					}
 				},
-				render_old: function() {
+				_render: function() {
 
 					try {
 
