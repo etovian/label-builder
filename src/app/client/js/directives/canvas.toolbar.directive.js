@@ -1,76 +1,77 @@
 (function() {
 
-	'use strict';
+    'use strict';
 
-	angular.module('app').directive('canvasToolbar', [CanvasToolbarDirective]);
+    function CanvasToolbarDirectiveController($aside) {
 
-	function CanvasToolbarDirective() {
+        var vm = this;
+        angular.extend(vm, {
 
-		var controller = [
-			'$aside',
-			CanvasToolbarDirectiveController
-		];
+            openEditInformationModal: function() {
+                var opts = {
+                    templateUrl: 'templates/' + 'edit.information.html',
+                    controller: 'EditInformationController',
+                    controllerAs: 'vm',
+                    placement: 'right',
+                    size: 'sm'
+                };
 
-		return {
-			scope: {
-				nutraLabel: '=',
-				goRenderedLabel: '=',
-				goDiagram: '='
-			},
-			templateUrl: 'directives/canvas.toolbar.html',
-			controller: controller,
-			controllerAs: 'vm',
-			bindToController: true,
-			// link: link,
-			replace: true
-		};
+                $aside.open(opts);
+            },
+            openFontColorsModal: function() {
+                var opts = {
+                    templateUrl: 'templates/' + 'font.colors.html',
+                    controller: 'FontColorsController',
+                    controllerAs: 'vm',
+                    placement: 'right',
+                    size: 'md'
+                };
 
-		function CanvasToolbarDirectiveController($aside) {
+                $aside.open(opts);
+            },
+            openFontSizesModal: function() {
+                var opts = {
+                    templateUrl: 'templates/' + 'font.sizes.html',
+                    controller: 'FontSizesController',
+                    controllerAs: 'vm',
+                    placement: 'right',
+                    size: 'md'
+                };
 
-			var vm = this;
-			angular.extend(vm, {
+                $aside.open(opts);
+            },
+            toggleRotation: function() {
+                if(vm.goRenderedLabel.angle === 0) {
+                    vm.goRenderedLabel.angle = 270;
+                } else {
+                    vm.goRenderedLabel.angle = 0;
+                }
+            }
+        });
+    }
 
-				openEditInformationModal: function() {
-					var opts = {
-						templateUrl: 'templates/' + 'edit.information.html',
-						controller: 'EditInformationController',
-						controllerAs: 'vm',
-						placement: 'right',
-						size: 'sm'
-					};
+    function CanvasToolbarDirective() {
 
-					$aside.open(opts);
-				},
-				openFontColorsModal: function() {
-					var opts = {
-						templateUrl: 'templates/' + 'font.colors.html',
-						controller: 'FontColorsController',
-						controllerAs: 'vm',
-						placement: 'right',
-						size: 'md'
-					};
+        var controller = [
+            '$aside',
+            CanvasToolbarDirectiveController
+        ];
 
-					$aside.open(opts);
-				},
-				openFontSizesModal: function() {
-					var opts = {
-						templateUrl: 'templates/' + 'font.sizes.html',
-						controller: 'FontSizesController',
-						controllerAs: 'vm',
-						placement: 'right',
-						size: 'md'
-					};
+        return {
+            scope: {
+                nutraLabel: '=',
+                goRenderedLabel: '=',
+                goDiagram: '='
+            },
+            templateUrl: 'directives/canvas.toolbar.html',
+            controller: controller,
+            controllerAs: 'vm',
+            bindToController: true,
+            // link: link,
+            replace: true
+        };
+    }
 
-					$aside.open(opts);
-				},
-				toggleRotation: function() {
-					if(vm.goRenderedLabel.angle === 0) {
-						vm.goRenderedLabel.angle = 270;
-					} else {
-						vm.goRenderedLabel.angle = 0;
-					}
-				}
-			});
-		}
-	}
-})();
+    angular.module('app').directive('canvasToolbar', [CanvasToolbarDirective]);
+
+}());

@@ -2,33 +2,7 @@
 
 	'use strict';
 
-	angular.module('app').directive('nutraLbCanvas', [LabelBuilderCanvasDirective]);
-
-	function LabelBuilderCanvasDirective() {
-
-		var controller = [
-			'LabelComponentService', 
-			'$q', 
-			'StaticDataService', 
-			'NotificationService', 
-			'$aside',
-			LabelBuilderCanvasDirectiveController
-		];
-
-		return {
-			scope: {
-				nutraLabel: '='
-			},
-			templateUrl: 'directives/label-builder-canvas.html',
-			controller: controller,
-			controllerAs: 'vm',
-			bindToController: true,
-			link: link,
-			replace: true
-		};
-	}
-
-	function link(scope, element, attribute) {
+	function link(scope, element) {
 		var stage;
 		var canvas = element.find('canvas')[0];
 		if(scope.stage) {
@@ -65,9 +39,6 @@
 			zoomInput: 100,
 			zoomOptions: staticDataService.getZoomOptions(),
 			centerOnRenderedLabel: function() {
-				var stageBounds = vm.stage.getBounds();
-				var stageWidth = stageBounds.width;
-				var stageHeight = stageBounds.height;
 				var labelBounds = vm.renderedLabel.getBounds();
 				var labelWidth = labelBounds.width;
 				var labelHeight = labelBounds.height;
@@ -185,7 +156,7 @@
 			resetView: function() {
 				angular.extend(vm.stage, {
 					regX: 0,
-					regY: 0,
+					regY: 0
 				});
 
 				vm.scale = vm.getDefaultZoom();
@@ -205,7 +176,7 @@
 				// vm.centerOnRenderedLabel();
 				vm.stage.update();
 			},
-			tick: function(event) {
+			tick: function() {
 				if(vm.stage  && vm.update) {
 					vm.render();
 					vm.update = false;
@@ -232,7 +203,7 @@
 			zoomInputChange: function() {
 				var factor = vm.zoomInput / 100;
 				vm.zoom(factor);
-			},
+			}
 		});
 
 		vm.scale = vm.getDefaultZoom(); //TODO: make this less yucky.
@@ -243,4 +214,30 @@
 		
 	}
 
-})();
+	function LabelBuilderCanvasDirective() {
+
+		var controller = [
+			'LabelComponentService',
+			'$q',
+			'StaticDataService',
+			'NotificationService',
+			'$aside',
+			LabelBuilderCanvasDirectiveController
+		];
+
+		return {
+			scope: {
+				nutraLabel: '='
+			},
+			templateUrl: 'directives/label-builder-canvas.html',
+			controller: controller,
+			controllerAs: 'vm',
+			bindToController: true,
+			link: link,
+			replace: true
+		};
+	}
+
+	angular.module('app').directive('nutraLbCanvas', [LabelBuilderCanvasDirective]);
+
+}());

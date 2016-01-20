@@ -1,0 +1,6 @@
+{
+  "globals": ["angular"],
+  "latedef": true,
+  "predef": ["angular"]
+
+}

@@ -1,21 +1,7 @@
 (function() {
 	'use strict';
 
-	angular.module('app').directive('trhMainMenu', MainMenuDirective);
-
-	function MainMenuDirective() {
-		return {
-			scope: {
-
-			},
-			templateUrl: 'directives/main.menu.html',
-			controller: ['NavigationService', '$location', MainMenuDirectiveController],
-			controllerAs: 'vm',
-			bindToController: true
-		};
-	}
-
-	function MainMenuDirectiveController(navigationService, $location) {
+	function MainMenuDirectiveController($location) {
 
 		var vm = this;
 		angular.extend(vm, {
@@ -52,4 +38,17 @@
 		});
 	}
 
-})();
+	function MainMenuDirective() {
+		return {
+			scope: {
+
+			},
+			templateUrl: 'directives/main.menu.html',
+			controller: ['$location', MainMenuDirectiveController],
+			controllerAs: 'vm',
+			bindToController: true
+		};
+	}
+
+	angular.module('app').directive('trhMainMenu', MainMenuDirective);
+}());
