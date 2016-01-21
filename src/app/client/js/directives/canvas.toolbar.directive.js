@@ -1,13 +1,20 @@
-(function() {
+(function () {
 
     'use strict';
 
-    function CanvasToolbarDirectiveController($aside) {
+    function CanvasToolbarDirectiveController ($aside) {
 
         var vm = this;
         angular.extend(vm, {
 
-            openEditInformationModal: function() {
+            getMailLink: function () {
+                var subjectParam = '';
+                if (vm.nutraLabel) {
+                    subjectParam = 'Subject=Label%20' + vm.nutraLabel.LabelId;
+                }
+                return 'mailto:mike.green@stgconsulting.com?' + subjectParam;
+            },
+            openEditInformationModal: function () {
                 var opts = {
                     templateUrl: 'templates/' + 'edit.information.html',
                     controller: 'EditInformationController',
@@ -18,7 +25,7 @@
 
                 $aside.open(opts);
             },
-            openFontColorsModal: function() {
+            openFontColorsModal: function () {
                 var opts = {
                     templateUrl: 'templates/' + 'font.colors.html',
                     controller: 'FontColorsController',
@@ -29,7 +36,7 @@
 
                 $aside.open(opts);
             },
-            openFontSizesModal: function() {
+            openFontSizesModal: function () {
                 var opts = {
                     templateUrl: 'templates/' + 'font.sizes.html',
                     controller: 'FontSizesController',
@@ -40,8 +47,8 @@
 
                 $aside.open(opts);
             },
-            toggleRotation: function() {
-                if(vm.goRenderedLabel.angle === 0) {
+            toggleRotation: function () {
+                if (vm.goRenderedLabel.angle === 0) {
                     vm.goRenderedLabel.angle = 270;
                 } else {
                     vm.goRenderedLabel.angle = 0;
@@ -50,7 +57,7 @@
         });
     }
 
-    function CanvasToolbarDirective() {
+    function CanvasToolbarDirective () {
 
         var controller = [
             '$aside',
@@ -67,7 +74,6 @@
             controller: controller,
             controllerAs: 'vm',
             bindToController: true,
-            // link: link,
             replace: true
         };
     }

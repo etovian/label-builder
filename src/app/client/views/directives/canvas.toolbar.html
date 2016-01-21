@@ -3,26 +3,6 @@
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-            	<!-- Pan/Select -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    Canvas Mode 
-                                    <span class="glyphicon glyphicon-move"></span>
-                                    <span class="caret"></span>
-                                </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a>
-                                <span class="glyphicon glyphicon-hand-up"></span> Select
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="glyphicon glyphicon-move"></span> Pan
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li>
                     <a ng-click="vm.openFontSizesModal()" style="cursor: pointer">
                         <!-- Font Size -->
@@ -36,7 +16,8 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
                         <!-- Text Justification -->
                         <span class="glyphicon glyphicon-align-justify"></span>
                         <span class="caret"></span>
@@ -71,13 +52,14 @@
                     </a>
                 </li>
                 <li>
-                    <a style="cursor: pointer">
+                    <a href="{{ vm.getMailLink() }}" style="cursor: pointer">
                         <!-- Email Designer -->
                         <span class="glyphicon glyphicon-envelope"></span>
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
                         <!-- Save -->
                         <span class="glyphicon glyphicon-cloud-upload"></span>
                         <span class="caret"></span>
@@ -96,7 +78,8 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
                         <!-- Print -->
                         <span class="glyphicon glyphicon-print"></span>
                         <span class="caret"></span>
@@ -138,7 +121,8 @@
                                 <span class="input-group-addon">
                                                 <span class="glyphicon glyphicon-zoom-in"></span>
                                 </span>
-                                <input ng-model="vm.goDiagram.scale" type="number" min="0.5" max="3" step="0.25" class="form-control" placeholder="Zoom">
+                                <input ng-model="vm.goDiagram.scale" type="number" min="0.5" max="3" step="0.25"
+                                       class="form-control" placeholder="Zoom">
                                 <span class="input-group-addon">x</span>
                             </div>
                         </div>
@@ -152,9 +136,9 @@
                 </li>
                 <li>
                     <a style="cursor: pointer">
-                                    Log Out
-                                    <span class="glyphicon glyphicon-log-out"></span>
-                                </a>
+                        Log Out
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </a>
                 </li>
             </ul>
         </div>

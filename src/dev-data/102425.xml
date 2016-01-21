@@ -52,7 +52,7 @@
         <ServingInfoFontSize>8</ServingInfoFontSize>
         <ServingInfoLineHeight>8</ServingInfoLineHeight>
         <Border>
-            <BorderWidth>0</BorderWidth>
+            <BorderWidthW>0</BorderWidthW>
             <TopInset>0</TopInset>
             <LeftInset>0</LeftInset>
             <RightInset>0</RightInset>
@@ -233,7 +233,7 @@
                 <Text>Softgels</Text>
             </DeliveryForm>
             <DosageConsistency />
-            <GenericDescription />
+            <GenericGDescription />
         </FPTextualData>
     </FrontPanel>
     <BackPanel>
